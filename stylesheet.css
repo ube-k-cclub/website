@@ -1,0 +1,194 @@
+/*フォントの設定*/
+body{
+    font-family: "Microsoft YaHei Light";
+}
+
+#page_top{
+    width:100px;
+    height:100px;
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    background:rgb(126, 126, 126);
+    opacity: 0.6;
+    border-radius: 50%;
+}
+
+#page_top a{
+    position:relative;
+    display:block;
+    width:100px;
+    height:100px;
+    text-decoration: none;
+}
+
+#page_top a::before{
+    font-size:50px;
+    font-family: FontAwesome;
+    content:'\f106';
+    color:#fff;
+    position:absolute;
+    width:50px;
+    height:55px;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    margin:auto;
+    text-align: center;
+}
+
+/*メニュー全体のulの設定 横幅はここで変更する*/
+#dropmenu{
+    list-style-type:none;
+    width:1200px;
+    height:40px;
+    margin:5px auto 300px;
+    padding:0;
+    background:#add8e6;
+    border-radius: 3px 3px 0 0;
+}
+
+/*メインメニューが6なので16%*/
+/*サブメニューの表示位置の基準になる→position:～*/
+#dropmenu li{
+    position: relative;
+    width:16%;
+    float:left;
+    margin:0;
+    padding:0;
+}
+
+/*メインメニューのリンク*/
+#dropmenu li a{
+    display:block;
+    margin:0px;
+    padding:15px 0px 11px;
+    color:#000;
+    line-height:1px;
+    text-decoration:none;
+}
+
+/*マウスを乗せた時の色の設定(メイン、サブメニュー共通)*/
+#dropmenu li:hover > a{
+    background:#48d1cc;
+    color:#fff;
+}
+
+/*メインメニューにマウスを乗せた時に角を丸くする*/
+/*>をはさむことで子要素のみに適用される→メインのところだけ*/
+#dropmenu > li:hover > a{
+    border-radius:3px 3px 0 0;
+}
+
+/*サブメニュー全体のulの設定*/
+/*top:100%でメニューの真下に表示される*/
+/*border-radiusでカドを丸くしている*/
+#dropmenu li ul{
+    list-style:none;
+    position:absolute;
+    top: 100%;
+    left:0;
+    margin:0;
+    padding:0;
+    border-radius: 0 0 3px 3px;
+} 
+
+/*サブメニューの幅がメインメニューの2倍になっているため*/
+#dropmenu li:last-child ul{
+    left:-100%;
+    width:100%
+}
+
+/*サブメニュー内のliの設定*/
+/*サブメニューとメインメニューの幅を一緒にする→width:100%*/
+/*ここよくわからない*/
+#dropmenu li ul li{
+    overflow: hidden;
+    width:192px;
+    height:0;
+    color:#fff;
+    -moz-transition:.2s;
+    -webkit-transition:.2s;
+    -o-transition:.2s;
+    -ms-transition:.2s;
+    transition:.2s;
+}
+
+/*サブメニューのリンク*/
+/*ここもよくわからない*/
+#dropmenu li ul li a{
+    padding:13px 14px;
+    background:#87ceeb;
+    text-align:left;
+    font-size:14px;
+    font-weight: normal;
+}
+
+/*メインメニューにマウスを乗せた時のサブメニュー*/
+#dropmenu li:hover ul li{
+    overflow: visible;
+    height:24px;
+    border-top:1px solid #e0ffff;
+    border-bottom:1px solid #e0ffff;
+}
+
+/*一番上と一番下のボーダーの削除*/
+/*
+#dropmenu li:hover ul li:first-child{
+    border-top:0;
+}
+*/
+#dropmenu li:hover ul li:last-child{
+    border-bottom:0;
+}
+
+/*一番下のサブメニューの下の角を丸くする*/
+#dropmenu li:hover ul li:last-child a{
+    border-radius: 0 0 3px 3px;
+}
+
+.header li{
+    list-style:none;
+    float: left;
+    padding:0px 40px;
+    margin:0px 10px;
+    text-align:center;
+}
+
+img{
+    height:125px;
+    width:230px;
+}
+
+.header{
+    color:#000000;
+    background-color:#add8e6;
+    height:155px;
+}
+
+.main{
+    background-color: #fff8dc;
+    height:2400px;
+}
+
+.slide{
+    height:1000px;
+    background-color: antiquewhite;
+}
+
+.info{
+    background-color:#fff8dc;
+    height:1000px;
+}
+
+.footer{
+    background-color:#add8e6;
+    height:170px;
+}
+
+.footer li{
+    font-size:10px;
+    list-style:none;
+    padding:2px 0px;
+}
