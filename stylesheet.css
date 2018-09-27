@@ -96,7 +96,6 @@ body{
 
 /*サブメニューの幅がメインメニューの2倍になっているため*/
 #dropmenu li:last-child ul{
-    left:-100%;
     width:100%
 }
 
